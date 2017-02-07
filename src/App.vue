@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -13,26 +11,30 @@ export default {
 <style lang="stylus">
 *
   box-sizing: border-box
+  padding: 0
+  margin: 0
 
 html
-  height: 100%
   min-height: 100%
-
-body
-  padding: 60px 0 0
-  margin: 0
-  background-image: url('./assets/art1.svg'), url('./assets/art2.svg')
-  background-position: top left, bottom right
-  background-repeat: no-repeat, no-repeat
-  background-size: 250px, 100px
-  height: 100%
-  min-height: 100%
-
-#app
+  min-width: 320px
   font-family: 'proxima-nova', sans-serif
   font-weight: 300
-  color: rgb(31, 36, 75)
+  font-size: 18px
+  line-height: 1.5
+  color: rgb(40, 40, 90)
   text-align: center
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+body
+  padding: 30vh 0
+  margin: 0 2rem
+  background-image: url('./assets/art1.svg'), url('./assets/art2.svg')
+  background-position: top left, bottom right
+  background-repeat: no-repeat, no-repeat
+  background-size: 70%, 30%
+  min-height: 100%
+
+  @media screen and (orientation: landscape)
+    background-size: 45%, 20%
 </style>
