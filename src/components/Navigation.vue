@@ -15,7 +15,7 @@ export default {
     return {
       items: [
         { to: '/location', label: 'Venue & Transport' },
-        { to: '/accomodation', label: 'Accomodation' },
+        { to: '/accommodation', label: 'Accommodation' },
         { to: '/gifts', label: 'Gifts' },
         { to: '/rsvp', label: 'RSVP' },
       ],
@@ -26,7 +26,7 @@ export default {
 
 <style module lang="stylus">
 .menu
-  margin: 1em 0 2em
+  margin: 1em 0
 
 .list
   list-style-type: none
@@ -46,16 +46,13 @@ export default {
   text-decoration: none
   padding: 0.5em 1em
   color: rgb(40, 40, 90)
+  background-color: white
+  transition: background-color 0.5s, color 0.5s
 
-  @media screen and (min-width: 40rem)
-    border-bottom: 1px solid rgb(40, 40, 90)
-
-.linkActive
-  background-color: rgb(40, 40, 90)
-  color: white
 
   @media screen and (min-width: 40rem)
     position: relative
+    border-bottom: 1px solid rgb(40, 40, 90)
 
     &:after
       content: ''
@@ -65,5 +62,14 @@ export default {
       left: calc(50% - 10px)
       border-left: 10px solid transparent
       border-right: 10px solid transparent
+      border-top: 10px solid transparent
+      transition: border-top 0.5s
+
+.linkActive
+  background-color: rgb(40, 40, 90)
+  color: white
+
+  @media screen and (min-width: 40rem)
+    &:after
       border-top: 10px solid rgb(40, 40, 90)
 </style>

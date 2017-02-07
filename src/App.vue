@@ -3,7 +3,11 @@
     <names />
     <intro />
     <navigation />
-    <router-view class="page"></router-view>
+    <div class="page">
+      <transition name="slide">
+        <router-view></router-view>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -40,7 +44,7 @@ html
   -moz-osx-font-smoothing: grayscale
 
 body
-  padding: 30vh 0
+  padding: 30vh 0 20vh 0
   margin: 0 2rem
   background-image: url('./assets/art1.svg'), url('./assets/art2.svg')
   background-position: top left, bottom right
@@ -49,7 +53,7 @@ body
   min-height: 100%
 
   @media screen and (orientation: landscape)
-    background-size: 45%, 20%
+    background-size: 45%, 25%
 
 
 h1, h2, h3, h4, h5, h6
@@ -68,6 +72,19 @@ sup
 
 .page
   max-width: 40rem
-  margin: 0 auto
+  margin: -1px auto 0
+  position: relative
+  padding-top: 1px
+
+.slide-enter-active,
+.slide-leave-active
+  transition: opacity 0.5s
+
+.slide-enter,
+.slide-leave-to
+  opacity: 0
+
+.slide-leave-active
+  position: absolute
 
 </style>

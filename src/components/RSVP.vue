@@ -38,9 +38,6 @@ export default {
       width: 33%
       text-align: center
 
-    h2
-      margin-top: 0
-
 @media screen and (min-width: 48rem)
   .pull:first-child
       width: 50%

@@ -2,10 +2,8 @@
     <h1 :class="$style.names">
       <router-link :to="linkTo" exact :class="$style.link">
         <span :class="$style.name1">Jessica</span>
-        <span :class="$style.line2">
-          <span :class="$style.nameAnd">&amp;</span>
-          <span :class="$style.name2">Matthew</span>
-        </span>
+        <span :class="$style.nameAnd">&amp;</span>
+        <span :class="$style.name2">Matthew</span>
       </router-link>
     </h1>
 </template>
@@ -32,6 +30,7 @@ export default {
   max-width: 6em
 
   @media screen and (min-width: 32rem)
+    text-align: right
     font-size: 4rem
     max-width: 6em
 
@@ -49,9 +48,6 @@ export default {
   .name1
     display: block
     text-align: left
-
-  .line2
-    text-align: right
 
   .nameAnd
     font-size: 0.6em
