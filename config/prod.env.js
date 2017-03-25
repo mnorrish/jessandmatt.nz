@@ -1,4 +1,4 @@
 module.exports = {
   NODE_ENV: '"production"',
-  googleAnalyticsTrackingID: 'UA-96158118-1',
+  googleAnalyticsTrackingID: '"UA-96158118-1"',
 }
