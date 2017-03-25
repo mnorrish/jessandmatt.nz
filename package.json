@@ -1,7 +1,7 @@
 {
   "name": "jessandmatt.nz",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Website for Jess and Matt's wedding",
   "author": "Matthew Norrish <matt.norrish@clavisinsight.com>",
   "private": true,
   "scripts": {
